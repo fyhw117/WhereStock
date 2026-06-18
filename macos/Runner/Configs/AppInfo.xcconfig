@@ -8,7 +8,7 @@
 PRODUCT_NAME = wherestock
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.example.wherestock
+PRODUCT_BUNDLE_IDENTIFIER = jp.yoshiyuki.WhereStock01
 
 // The copyright displayed in application information
 PRODUCT_COPYRIGHT = Copyright © 2026 com.example. All rights reserved.

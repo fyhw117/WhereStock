@@ -142,7 +142,7 @@ class _ItemFormScreenState extends State<ItemFormScreen> {
 
                   // Category Selector Dropdown
                   DropdownButtonFormField<String?>(
-                    value: _selectedCategoryId,
+                    initialValue: _selectedCategoryId,
                     decoration: const InputDecoration(
                       labelText: 'カテゴリー',
                     ),
@@ -174,7 +174,7 @@ class _ItemFormScreenState extends State<ItemFormScreen> {
 
                   // Room Selector Dropdown
                   DropdownButtonFormField<String>(
-                    value: _selectedRoomId,
+                    initialValue: _selectedRoomId,
                     decoration: const InputDecoration(
                       labelText: '部屋',
                     ),
@@ -204,7 +204,7 @@ class _ItemFormScreenState extends State<ItemFormScreen> {
 
                   // Location Selector Dropdown
                   DropdownButtonFormField<String>(
-                    value: _selectedLocationId,
+                    initialValue: _selectedLocationId,
                     decoration: const InputDecoration(
                       labelText: '保管場所',
                     ),

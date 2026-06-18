@@ -284,7 +284,7 @@ class LocationsSettingsTab extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   DropdownButtonFormField<String>(
-                    value: selectedRoomId,
+                    initialValue: selectedRoomId,
                     decoration: const InputDecoration(labelText: '部屋'),
                     items: state.rooms.map((room) {
                       return DropdownMenuItem<String>(
