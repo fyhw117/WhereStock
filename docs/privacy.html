@@ -256,6 +256,22 @@
             border-left: 4px solid var(--primary);
             margin-bottom: 1.5rem;
         }
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white !important;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+        }
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+        }
     </style>
 </head>
 <body>
@@ -326,10 +342,14 @@
 
             <section id="contact">
                 <h2>7. お問い合わせ</h2>
-                <p>本プライバシーポリシーまたは本アプリにおける個人情報の取り扱いに関するご質問やご意見がございましたら、アプリ内の設定画面にある「お問い合わせ」または以下の窓口までご連絡ください。</p>
-                <p class="text-muted">
-                    WhereStock サポートチーム<br>
-                    メールアドレス: support@example.com
+                <p>本プライバシーポリシーまたは本アプリにおける個人情報の取り扱いに関するご質問やご意見がございましたら、以下のボタンまたはリンクよりお問い合わせフォームを開き、必要事項をご記入の上ご送信ください。</p>
+                <p style="margin-top: 1.5rem; margin-bottom: 1.5rem;">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3KwEIgz7V9U8YkpW_cNouVGCBa7ahxZcEWWiXogZ9cmQbhw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                        お問い合わせフォームを開く
+                    </a>
+                </p>
+                <p class="text-muted" style="font-size: 0.875rem;">
+                    ※外部サービス（Google フォーム）に遷移します。
                 </p>
             </section>
         </main>
