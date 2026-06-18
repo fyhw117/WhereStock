@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhereStock - プライバシーポリシー</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-hover: #4338CA;
+            --bg-light: #F9FAFB;
+            --card-light: #FFFFFF;
+            --text-light: #1F2937;
+            --text-muted-light: #4B5563;
+            --border-light: #E5E7EB;
+            
+            --bg-dark: #111827;
+            --card-dark: #1F2937;
+            --text-dark: #F9FAFB;
+            --text-muted-dark: #9CA3AF;
+            --border-dark: #374151;
+            
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: var(--bg-dark);
+                color: var(--text-dark);
+            }
+            .card {
+                background-color: var(--card-dark);
+                border-color: var(--border-dark);
+            }
+            .text-muted {
+                color: var(--text-muted-dark);
+            }
+            header {
+                background: linear-gradient(135deg, #312E81 0%, #1E1B4B 100%);
+                border-bottom: 1px solid var(--border-dark);
+            }
+            .toc a {
+                color: var(--text-muted-dark);
+            }
+            .toc a:hover {
+                color: #818CF8;
+            }
+            .toc-active {
+                color: #818CF8 !important;
+                border-left-color: #818CF8 !important;
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: var(--bg-light);
+                color: var(--text-light);
+            }
+            .card {
+                background-color: var(--card-light);
+                border-color: var(--border-light);
+            }
+            .text-muted {
+                color: var(--text-muted-light);
+            }
+            header {
+                background: linear-gradient(135deg, #4F46E5 0%, #312E81 100%);
+                border-bottom: 1px solid var(--border-light);
+            }
+            .toc a {
+                color: var(--text-muted-light);
+            }
+            .toc a:hover {
+                color: var(--primary);
+            }
+            .toc-active {
+                color: var(--primary) !important;
+                border-left-color: var(--primary) !important;
+            }
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            transition: var(--transition);
+        }
+
+        header {
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            pointer-events: none;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 0 1rem 0;
+            letter-spacing: -0.025em;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 1.5rem 1rem;
+            }
+            .sidebar {
+                display: none;
+            }
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 2rem;
+            height: fit-content;
+        }
+
+        .toc {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc a {
+            display: block;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-left: 2px solid transparent;
+            transition: var(--transition);
+        }
+
+        .card {
+            border: 1px solid;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        }
+
+        @media (max-width: 640px) {
+            .card {
+                padding: 1.5rem;
+            }
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 1.25rem;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+
+        p, ul, ol {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            font-size: 0.875rem;
+            border-top: 1px solid;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            footer {
+                border-top-color: var(--border-dark);
+                color: var(--text-muted-dark);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            footer {
+                border-top-color: var(--border-light);
+                color: var(--text-muted-light);
+            }
+        }
+
+        .highlight-box {
+            padding: 1.25rem;
+            border-radius: 8px;
+            background-color: rgba(79, 70, 229, 0.08);
+            border-left: 4px solid var(--primary);
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>プライバシーポリシー</h1>
+            <p>WhereStock アプリケーションにおける個人情報の取り扱いについて</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <ul class="toc">
+                <li><a href="#intro" class="toc-link">はじめに</a></li>
+                <li><a href="#data-collection" class="toc-link">収集する情報</a></li>
+                <li><a href="#data-usage" class="toc-link">情報の利用目的</a></li>
+                <li><a href="#data-storage" class="toc-link">データの保存と管理</a></li>
+                <li><a href="#third-party" class="toc-link">第三者提供</a></li>
+                <li><a href="#changes" class="toc-link">ポリシーの変更</a></li>
+                <li><a href="#contact" class="toc-link">お問い合わせ</a></li>
+            </ul>
+        </aside>
+
+        <main class="card">
+            <section id="intro">
+                <h2>1. はじめに</h2>
+                <p>WhereStock（以下、「本アプリ」といいます）は、ユーザーの皆様のプライバシーを尊重し、個人情報の保護に努めています。本プライバシーポリシーでは、本アプリが収集する情報、その利用目的、および情報の管理方法について説明します。</p>
+                <div class="highlight-box">
+                    <strong>要約:</strong> 本アプリは基本的にオフラインファーストで動作し、ユーザー登録なしでご利用いただけます。個人を特定できる情報をサーバーに送信・収集することはありません。
+                </div>
+            </section>
+
+            <section id="data-collection">
+                <h2>2. 収集する情報</h2>
+                <p>本アプリは、以下の情報を取得・保持する場合があります。</p>
+                <ul>
+                    <li><strong>本アプリに入力されるデータ:</strong> 部屋の名前、在庫アイテムの名前、数量、設定情報など。これらのデータはすべてデバイス内部にのみ保存されます。</li>
+                    <li><strong>デバイス情報:</strong> オペレーティングシステムの種類、言語設定、クラッシュログなど（アプリの品質向上やバグ修正のために利用されます）。</li>
+                </ul>
+            </section>
+
+            <section id="data-usage">
+                <h2>3. 情報の利用目的</h2>
+                <p>収集した情報は、以下の目的でのみ利用します。</p>
+                <ul>
+                    <li>本アプリの在庫管理・表示機能の提供および動作のため</li>
+                    <li>不具合 of 修正やユーザー体験の向上のため</li>
+                    <li>お客様からのお問い合わせに対応するため</li>
+                </ul>
+            </section>
+
+            <section id="data-storage">
+                <h2>4. データの保存と管理</h2>
+                <p>本アプリで登録された在庫データや設定データは、お客様の端末（ローカルストレージ）に安全に保存されます。当社がこれらのデータを収集して外部サーバーに保存・蓄積することはありません。</p>
+                <p>アンインストールや端末の初期化を行うと、アプリ内のデータも削除されますのでご注意ください。</p>
+            </section>
+
+            <section id="third-party">
+                <h2>5. 第三者への開示・提供</h2>
+                <p>本アプリは、法令に基づく場合を除き、お客様の同意を得ることなく、収集した情報を第三者に提供または開示することはありません。</p>
+            </section>
+
+            <section id="changes">
+                <h2>6. プライバシーポリシーの変更</h2>
+                <p>本プライバシーポリシーは、アプリの機能追加や法令の変更に伴い、予告なく改定されることがあります。改定されたポリシーは、本ページに掲載された時点、またはアプリ内で通知された時点から有効となります。</p>
+            </section>
+
+            <section id="contact">
+                <h2>7. お問い合わせ</h2>
+                <p>本プライバシーポリシーまたは本アプリにおける個人情報の取り扱いに関するご質問やご意見がございましたら、アプリ内の設定画面にある「お問い合わせ」または以下の窓口までご連絡ください。</p>
+                <p class="text-muted">
+                    WhereStock サポートチーム<br>
+                    メールアドレス: support@example.com
+                </p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 WhereStock. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple ScrollSpy implementation for Sidebar Navigation
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('.toc-link');
+            const sections = document.querySelectorAll('section');
+
+            function changeActiveLink() {
+                let index = sections.length;
+
+                while(--index && window.scrollY + 100 < sections[index].offsetTop) {}
+                
+                links.forEach((link) => link.classList.remove('toc-active'));
+                if (links[index]) {
+                    links[index].classList.add('toc-active');
+                }
+            }
+
+            changeActiveLink();
+            window.addEventListener('scroll', changeActiveLink);
+        });
+    </script>
+</body>
+</html>
